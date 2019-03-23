@@ -1,3 +1,6 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xmlns="http://www.w3.org/1999/xhtml">
+
 
 <html>
 	<center>
@@ -6,14 +9,25 @@
 		
 	</center>
 
+	
 <head>
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 	 背景图片样式 引用 -->
 		<link rel="stylesheet"  HREF="../css/back.css" type="text/css"  /> 
 
+		
+			<script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+			    <style>
+						.box{ height:200px; width:100%; background:#ffffff; margin:10px 0;}
+						.location{ position:fixed; right:0; bottom:10px; width:20px; background:#FFC; padding:5px; cursor:pointer;color:#003};
+					</style>
+		
 	 <title>  调牌、下载链接  </title>
-	 
+	  
 </head>
 <body>
+
 
 
 	
@@ -722,7 +736,9 @@
 	</div>	
 		
 	
-	
+<!-- 底部标签 -->
+	<div class="box bottom"></div>
+					
 <!--      更多       -->
 <div class="table-box"><table border="1" cellpadding="3" width="1000" align="center"> </a>
 	<center><br/>><br/>
@@ -761,38 +777,44 @@
 					</center>
 
 
-			
-			
-			
+		
 			
 
-<!--      Top  ↑       -->
-	<div class="table-box"><table border="1" cellpadding="3"  >	<br/>
-	
-		<tbody>
-			 <H4 align="right" >
-				<a target="_parent" HREF="#Top  ↑1" > Top  ↑ </a>
-			 </H4>	 
-		</tbody>
-	</div>
-	
-</tbody>
-</div>		
-	
+</div>	
 
-	
 
-	
-	<br/><br/><br/>
+
+<br/><br/><br/><br/><br/>
 	<center>
 		<a id="" >
-			<img width="800" height="" src=" niao.gif"  />
+			<!-- 图片点击跳转事件  -->
+			<!-- https://blog.csdn.net/zhufengy/article/details/80286906  -->
+			<img width="800" height="" src=" niao.gif"  style="CURSOR: hand" onclick='window.open("http://www.baidu.com")' />
+
 		</a>
 	</center>
-</tbody>
-</div>		
 
 	
+
+
+			<div class="location">
+					<p class="scroll_top">返回顶部</p>
+					
+<!-- 					
+					<div class="box a">跳到中部</div>
+					<p class="scroll_a">跳到中部</p>
+	 -->				
+					
+					<p class="scroll_bottom">滑到底部</p>
+			</div>
+			<script type="text/javascript">
+					jQuery(document).ready(function($){
+							$('.scroll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+							$('.scroll_a').click(function(){$('html,body').animate({scrollTop:$('.a').offset().top}, 800);});
+							$('.scroll_bottom').click(function(){$('html,body').animate({scrollTop:$('.bottom').offset().top}, 800);});
+					});
+			</script>
+
 	
 </body>
 </html>

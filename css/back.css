@@ -3,11 +3,13 @@ body{
 /*background-image:url(../source/xiangzi.gif);*/
 background-image:url(../source/kucha.png);
 
-/* 背景图垂直、水平均居中 
+/* 背景图位置
 https://zhidao.baidu.com/question/560318110525077724.html
 */
-/*background-position:center;*/
+/*background-position:center;
 background-position:bottom;
+*/
+background-position:430px 650px;
 
 /* 背景图不平铺 */
 background-repeat:no-repeat;
